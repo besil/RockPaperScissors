@@ -1,5 +1,10 @@
 package besil.rps.player.strategies;
 
+/**
+ * Factory class for different kind of @Strategy
+ * @author besil
+ *
+ */
 public class Strategies {
 
 	public static Strategy randomStrategy() {

@@ -5,6 +5,12 @@ import java.util.Random;
 
 import besil.rps.moves.Move;
 
+/**
+ * Concrete @Strategy.
+ * The player who plays accordingly to this @Strategy, will play ACDC
+ * @author besil
+ *
+ */
 public class RandomStrategy extends Strategy {
 	protected HashMap<Integer, Move> moveMap;
 	protected Random random;

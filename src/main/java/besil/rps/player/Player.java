@@ -6,7 +6,8 @@ import besil.rps.player.strategies.Strategy;
 
 /**
  * Main class representing a Player.
- * Each player has a name and a @Strategy
+ * Each player has a name and a @Strategy associated.
+ * Every @Turn of the @Game, a @Player chooses a new @Move accordingly to its @Strategy
  * @author besil
  *
  */
