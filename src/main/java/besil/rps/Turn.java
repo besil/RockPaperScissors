@@ -34,7 +34,9 @@ public class Turn {
 			System.out.println(p2+": "+p2m);
 
 			winnerMove = p1m.accept(p2m);
-			if(!winnerMove.isDraw()) {
+			if(winnerMove.isDraw()) {
+				System.out.println("Draw! Retry...");
+			} else {
 				System.out.println("Winning move: "+winnerMove);
 
 				winnerPlayer = winnerMove == p1m ? p1 : p2;
