@@ -1,7 +1,6 @@
 package besil.rps;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 import org.junit.Test;
 
@@ -17,6 +16,10 @@ public class GameTest {
 		Turn turn = new Turn( rock, scissors );
 		turn.run();
 		Move winMove = turn.winnerMove();
+		
+		assertEquals(rock != null, true);
+		assertEquals(scissors != null, true);
+		assertEquals(winMove != null, true);
 		assertEquals(winMove, rock);
 	}
 	
@@ -29,12 +32,8 @@ public class GameTest {
 		game.play();
 
 		Player winner = game.winner();
+		assertEquals(rockPlayer != null, true);
 		assertEquals(rockPlayer, winner);
-	}
-
-	@Test
-	public void test() {
-		fail("Not yet implemented");
 	}
 
 }
