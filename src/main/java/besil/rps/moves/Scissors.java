@@ -22,4 +22,9 @@ public class Scissors extends Move {
 		return visitor.visit(this);
 	}
 
+	@Override
+	public String toString() {
+		return "Scissors";
+	}
+	
 }

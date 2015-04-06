@@ -22,4 +22,9 @@ public class Rock extends Move {
 		return visitor.visit(this);
 	}
 
+	@Override
+	public String toString() {
+		return "Rock";
+	}
+	
 }

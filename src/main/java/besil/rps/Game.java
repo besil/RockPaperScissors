@@ -64,7 +64,7 @@ public class Game implements Iterable<Turn> {
 			@Override
 			public Turn next() {
 				turnCount += 1;
-				return new Turn(p1, p2);
+				return new Turn(turnCount-1, p1, p2);
 			}
 		};
 	}

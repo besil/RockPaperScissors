@@ -21,5 +21,10 @@ public class Paper extends Move {
 	public Move accept(Move visitor) {
 		return visitor.visit(this);
 	}
+
+	@Override
+	public String toString() {
+		return "Paper";
+	}
 	
 }
