@@ -18,7 +18,7 @@ public class Rock extends Move {
 	}
 
 	@Override
-	public Move accept(Visitor visitor) {
+	public Move accept(Move visitor) {
 		return visitor.visit(this);
 	}
 
