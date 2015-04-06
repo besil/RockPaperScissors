@@ -2,7 +2,7 @@ package besil.rps.player.strategies;
 
 public class Strategies {
 
-	public static Strategy defaultStrategy() {
+	public static Strategy randomStrategy() {
 		return new RandomStrategy();
 	}
 	

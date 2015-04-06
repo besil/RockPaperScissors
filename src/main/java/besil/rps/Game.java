@@ -8,6 +8,13 @@ import java.util.Map.Entry;
 
 import besil.rps.player.Player;
 
+/**
+ * Main class representing a Game.
+ * A game is made by a different number of @Turn objects (default: 3).
+ * Each @Turn has a winner, the game winner is the Player which wins the greatest number of single turns 
+ * @author besil
+ *
+ */
 public class Game implements Iterable<Turn> {
 	protected Player p1, p2;
 	protected int turnCount 		= 0;
@@ -22,6 +29,10 @@ public class Game implements Iterable<Turn> {
 		this.scoreMap.put(p2, 0);
 	}
 
+	/**
+	 * Calculates the winner player (the ones which won the greatest number of @Turn) 
+	 * @return The winner player
+	 */
 	public Player winner() {
 		return this.scoreMap.entrySet().stream()
 			.max(new Comparator<Map.Entry<Player, Integer>>() {
@@ -33,6 +44,9 @@ public class Game implements Iterable<Turn> {
 			.getKey();
 	}
 
+	/**
+	 * Iterate over the @Turn of this game and calculate the winner
+	 */
 	public void play() {
 		for(Turn turn : this) {
 			Player winnerPlayer = turn.play();
