@@ -3,7 +3,7 @@ Rock Paper Scissor Java Game
 
 QuickStart
 
-'''java
+```java
 Player silvio = Player.newPlayer("silvio", Strategies.randomStrategy());
 Player nemesi = Player.newPlayer("Nemesi", Strategies.randomStrategy());
 
@@ -13,4 +13,5 @@ g.play();
 Player winner = g.winner();
 
 printWinner(winner);
-'''
+```
+
