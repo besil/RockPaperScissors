@@ -4,7 +4,7 @@ public class Scissors extends Move {
 
 	@Override
 	public Move visit(Scissors scissors) {
-		return this;
+		return Draw.instance();
 	}
 
 	@Override

@@ -14,7 +14,7 @@ public class Rock extends Move {
 
 	@Override
 	public Move visit(Rock rock) {
-		return this;
+		return Draw.instance();
 	}
 
 	@Override

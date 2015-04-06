@@ -23,6 +23,10 @@ public abstract class Move {
 		return new Paper();
 	}
 
+	public boolean isDraw() {
+		return false;
+	}
+	
 	/**
 	 * Visitor pattern for defining which @Move wins over another one
 	 * @param m

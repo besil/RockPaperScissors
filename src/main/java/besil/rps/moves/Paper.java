@@ -9,7 +9,7 @@ public class Paper extends Move {
 
 	@Override
 	public Move visit(Paper paper) {
-		return this;
+		return Draw.instance();
 	}
 
 	@Override

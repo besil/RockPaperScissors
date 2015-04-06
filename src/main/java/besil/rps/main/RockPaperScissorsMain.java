@@ -14,6 +14,10 @@ public class RockPaperScissorsMain {
 		
 		Player winner = g.winner();
 		
-		System.out.println("The winner is: "+winner);
+		String winnerMex = "The winner is: "+winner;
+		System.out.println();
+		for(int i=0; i<winnerMex.length(); i++) System.out.print("*");
+		System.out.println();
+		System.out.println(winnerMex);
 	}
 }
