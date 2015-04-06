@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import besil.rps.moves.Move;
 import besil.rps.player.Player;
+import besil.rps.player.strategies.Strategies;
 
 public class GameTest {
 
@@ -17,23 +18,25 @@ public class GameTest {
 		turn.run();
 		Move winMove = turn.winnerMove();
 		
-		assertEquals(rock != null, true);
-		assertEquals(scissors != null, true);
-		assertEquals(winMove != null, true);
-		assertEquals(winMove, rock);
+		assertEquals(true, rock != null);
+		assertEquals(true, scissors != null);
+		assertEquals(true, winMove != null);
+		assertEquals(rock, winMove);
 	}
 	
 	@Test
-	public void rockWin() {
-		Player scissorPlayer 	= Player.scissorPlayer();
-		Player rockPlayer 		= Player.rockPlayer();
+	public void paperWin() {
+		Player paperPlayer	 	= Player.newPlayer("silvio", Strategies.papers());
+		Player rockPlayer 		= Player.newPlayer(Strategies.rocks());
 
-		Game game = new Game(scissorPlayer, rockPlayer);
+		Game game = new Game(paperPlayer, rockPlayer);
 		game.play();
 
 		Player winner = game.winner();
-		assertEquals(rockPlayer != null, true);
-		assertEquals(rockPlayer, winner);
+		
+		assertEquals("silvio", winner.name());
+		assertEquals(true, rockPlayer != null);
+		assertEquals(paperPlayer, winner);
 	}
 
 }
